@@ -1,0 +1,35 @@
+
+{% extends "cu/form.html"%}
+{%load crispy_forms_tags%}
+{%block cl %}
+
+
+<div class="row topmargin-sm clearfix">
+
+  <div class="col-12 bottommargin-sm">
+    <div class="ipost clearfix">
+      <div class="row clearfix">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-8">
+          <form  method="post">
+            {% csrf_token %}
+            <fieldset class="form-group">
+              <legend class="border-bottom mb-8">POST</legend>
+              {{ form|crispy }}
+            </fieldset>
+
+            <button class="button button-border button-rounded button-fill button-aqua" type='submit'><span>create post</span></button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+{%endblock cl%}

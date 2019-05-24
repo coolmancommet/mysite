@@ -1,0 +1,66 @@
+{%extends "blog/base2.html" %}
+{%block cs%}
+
+
+
+<div class="col-md-9">
+
+  <div class="clear"></div>
+
+  <div class="row clearfix">
+
+    <div class="col-lg-12">
+
+      <div class="tabs tabs-alt clearfix" id="tabs-profile">
+
+        <ul class="tab-nav clearfix">
+          <li><a href="#tab-posts"><i class="icon-pencil2"></i> Posts</a></li>
+        </ul>
+
+        <div class="tab-container">
+
+
+          <div class="tab-content clearfix" id="tab-posts">
+            <div class="row topmargin-sm clearfix">
+
+              {%for post in post%}
+              <div class="col-12 bottommargin-sm">
+                <div class="ipost clearfix">
+                  <div class="row clearfix">
+
+                    <div class="col-md-4">
+                    </div>
+
+                    <div class="col-md-8">
+                      <div class="entry-title">
+                        <h2><a href="{%url 'post-detail' post.id %}">{{post.title}}</a></h2>
+                      </div>
+                      <ul class="entry-meta clearfix">
+                        <li><i class="icon-calendar3"></i>{{post.date_posted}}</li>
+                        <li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li>
+                        <li><a href="#"><i class="icon-camera-retro"></i></a></li>
+                      </ul>
+                      <div class="entry-content">
+                        <p>{{post.content}} by {{post.author}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {%endfor%}
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+{%endblock cs%}

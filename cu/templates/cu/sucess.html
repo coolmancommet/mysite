@@ -1,0 +1,31 @@
+{%extends "cu/form.html"%}
+{%block cl %}
+<div class="row topmargin-sm clearfix">
+
+  <div class="col-12 bottommargin-sm">
+    <div class="ipost clearfix">
+      <div class="row clearfix">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-8">
+          {%if messages%}
+          {%for message in messages%}
+          <div class="alert alert-{{message.tags}}">
+            {{message}}
+          </div>
+          {%endfor%}
+          {%endif%}
+          <div class="col-md-12">
+            <a class="button button-border button-rounded button-fill button-aqua" href="{%url 'signup'%}"><span>Return To Signup</span></a>
+            <a class="button button-border button-rounded button-fill fill-from-right button-blue" href="{%url 'login'%}"><span>account login</span></a>
+            <a class="button button-border button-rounded button-fill fill-from-top button-amber" href="{%url 'blog-home'%}"><span>blog home</span></a>
+            <a class="button button-border button-rounded button-fill fill-from-bottom button-black" href="{%url 'blog-About'%}"><span>about the page</span></a>
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+{%endblock cl%}

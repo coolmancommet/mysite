@@ -1,0 +1,34 @@
+
+{% extends "cu/form.html"%}
+{%load crispy_forms_tags%}
+{%block cl %}
+
+
+<div class="row topmargin-sm clearfix">
+
+  <div class="col-12 bottommargin-sm">
+    <div class="ipost clearfix">
+      <div class="row clearfix">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-8">
+          SESSION IS OUT OF SCOPE NOW YOU ARE LOGGED OUT
+
+          <div class="border-top pt-3">
+            <small class="text-muted">
+              Have An Account? <a class="ml-2" style='color:aqua' href="{%url 'login'%}">LOG IN</a>
+            </small>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+{%endblock cl%}

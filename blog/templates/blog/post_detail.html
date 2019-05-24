@@ -1,0 +1,81 @@
+{%extends "blog/base2.html" %}
+{%block cs%}
+
+<div class="entry clearfix">
+
+								<!-- Entry Title
+								============================================= -->
+								<div class="entry-title">
+									<h1>{{object.title}}</h1>
+								</div><!-- .entry-title end -->
+
+								<!-- Entry Meta
+								============================================= -->
+								<ul class="entry-meta clearfix">
+									<li><i class="icon-calendar3"></i>{{object.date_posted|date:"F d,Y"}}</li>
+									<li><a href="#"><i class="icon-user"></i>{{object.author}}</a></li>
+									<li><i class="icon-folder-open"></i> <a href="#">General</a>, <a href="#">Media</a></li>
+									<li><a href="#"><i class="icon-comments"></i> 43 Comments</a></li>
+									<li><a href="#"><i class="icon-camera-retro"></i></a></li>
+								</ul><!-- .entry-meta end -->
+
+								<!-- Entry Image
+								============================================= -->
+								<div class="entry-image">
+									<a href="#"><img src="images/blog/full/1.jpg" alt="Blog Single image error here"></a>
+								</div><!-- .entry-image end -->
+
+								<!-- Entry Content
+								============================================= -->
+								<div class="entry-content notopmargin">
+                  <p>{{object.content}}</p>
+
+									<!-- Post Single - Content End -->
+
+									<!-- Tag Cloud
+									============================================= -->
+									<div class="btn btn-sm btn-outline-danger">
+										<a href="{%url 'post-delete' object.id %}">delete</a>
+									</div><!-- .tagcloud end -->
+									<div class="btn btn-sm btn-outline-primary">
+										<a href="{%url 'post-update' object.id %}">update</a>
+
+									</div>
+
+									<div class="clear"></div>
+
+									<!-- Post Single - Share
+									============================================= -->
+									<div class="si-share noborder clearfix">
+										<span>Share this Post:</span>
+										<div>
+											<a href="#" class="social-icon si-borderless si-facebook">
+												<i class="icon-facebook"></i>
+												<i class="icon-facebook"></i>
+											</a>
+											<a href="#" class="social-icon si-borderless si-twitter">
+												<i class="icon-twitter"></i>
+												<i class="icon-twitter"></i>
+											</a>
+											<a href="#" class="social-icon si-borderless si-pinterest">
+												<i class="icon-pinterest"></i>
+												<i class="icon-pinterest"></i>
+											</a>
+											<a href="#" class="social-icon si-borderless si-gplus">
+												<i class="icon-gplus"></i>
+												<i class="icon-gplus"></i>
+											</a>
+											<a href="#" class="social-icon si-borderless si-rss">
+												<i class="icon-rss"></i>
+												<i class="icon-rss"></i>
+											</a>
+											<a href="#" class="social-icon si-borderless si-email3">
+												<i class="icon-email3"></i>
+												<i class="icon-email3"></i>
+											</a>
+										</div>
+									</div><!-- Post Single - Share End -->
+
+								</div>
+							</div>
+{%endblock cs%}
