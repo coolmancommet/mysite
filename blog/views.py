@@ -20,7 +20,7 @@ class PostListView(ListView):
 
 class PostCreateView(LoginRequiredMixin,CreateView):
     model=post
-    fields=['title','content']
+    fields=['title','content','image']
 
     def form_valid(self,form):
         form.instance.author=self.request.user
@@ -29,7 +29,7 @@ class PostCreateView(LoginRequiredMixin,CreateView):
 
 class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
     model=post
-    fields=['title','content']
+    fields=['title','content','image']
 
     def form_valid(self,form):
         form.instance.author=self.request.user
