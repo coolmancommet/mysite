@@ -929,7 +929,7 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 	color: #CCC;
 }
 
-.dark .owl-carousel.owl-loading { background-image: url('../images/preloader-dark.gif'); }
+.dark .owl-carousel.owl-loading { background-image: url('../preloader-dark.gif'); }
 
 .dark .owl-carousel .owl-nav [class*=owl-] {
 	border-color: transparent;
@@ -1684,4 +1684,3 @@ body #side-panel.dark #side-panel-trigger-close a {
 	.dark .pricing-box.pricing-extended .pricing-action-area { border-top-color: rgba(255,255,255,0.15); }
 
 }
-
