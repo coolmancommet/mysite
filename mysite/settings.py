@@ -25,7 +25,7 @@ SECRET_KEY = '1@47a7efj6itrg_)9#!@ej7a4_11o7p5u=8efnjqvticidyv!y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.29.176','localhost']
+ALLOWED_HOSTS = ['192.168.29.176','localhost','vast-temple-82477.herokuapp.com']
 
 
 # Application definition
