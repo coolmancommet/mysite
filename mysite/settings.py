@@ -120,8 +120,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-#for heroku deployment
-django_heroku.settings(locals())
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
@@ -139,3 +138,6 @@ EMAIL_PORT=587
 EMAIL_USE_TLS=True
 EMAIL_HOST_USER=os.environ.get("GID")
 EMAIL_HOST_PASSWORD=os.environ.get("GPASS")
+
+#for heroku deployment
+django_heroku.settings(locals())
