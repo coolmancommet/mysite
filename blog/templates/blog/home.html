@@ -26,10 +26,13 @@
               {%for post in post%}
               <div class="col-12 bottommargin-sm">
                 <div class="ipost clearfix">
-                  <div class="row clearfix">
-
+                <div class="row clearfix">
                     <div class="col-md-4">
-                    </div>
+                  		<div class="entry-image">
+                  			<a href="{{post.image.url}}" data-lightbox="image"><img class="image_fade" src=" {{post.image.url}}" alt="Standard Post with Image"></a>
+                  		</div>
+                  </div>
+
 
                     <div class="col-md-8">
                       <div class="entry-title">
