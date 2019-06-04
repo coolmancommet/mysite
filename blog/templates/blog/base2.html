@@ -121,6 +121,9 @@
 			</div>
 
 		</header><!-- #header end -->
+		{%if user.is_authenticated %}
+
+		{%else%}
 		<section id="slider" class="slider-element slider-parallax swiper_wrapper full-screen clearfix slider-parallax-visible" style="height: 404px;">
 					<div class="slider-parallax-inner" style="height: 404px; transform: translateY(0px);">
 
@@ -142,6 +145,7 @@
 
 					</div>
 				</section>
+				{%endif%}
 		<!-- Content
 		============================================= -->
 		<section id="content">
@@ -230,7 +234,7 @@
 
 								<div class="widget clearfix">
 
-									<img src="images/footer-widget-logo.png" alt="" class="footer-logo">
+									<img src="{%static 'blog/logos.jpg'%}" alt="" class="footer-logo">
 
 									<p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards.</p>
 
